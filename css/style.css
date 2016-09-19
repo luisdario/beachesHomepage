@@ -1,0 +1,201 @@
+@font-face {
+  font-family: 'beachesFonts';
+  src: local('beachesFonts'), url('../fonts/beachesFonts.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'beachesFonts' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-beaches .path1:before {
+  content: "\e900";
+  color: rgb(0, 0, 0);
+}
+.icon-beaches .path2:before {
+  content: "\e901";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-beaches .path3:before {
+  content: "\e902";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-beaches .path4:before {
+  content: "\e903";
+  margin-left: -1em;
+  color: rgb(4, 6, 7);
+}
+.icon-beaches .path5:before {
+  content: "\e904";
+  margin-left: -1em;
+  color: rgb(4, 6, 7);
+}
+.icon-beaches .path6:before {
+  content: "\e905";
+  margin-left: -1em;
+  color: rgb(4, 6, 7);
+}
+.icon-beaches .path7:before {
+  content: "\e906";
+  margin-left: -1em;
+  color: rgb(4, 6, 7);
+}
+.icon-beaches .path8:before {
+  content: "\e907";
+  margin-left: -1em;
+  color: rgb(4, 6, 7);
+}
+.icon-beaches .path9:before {
+  content: "\e908";
+  margin-left: -1em;
+  color: rgb(4, 6, 7);
+}
+.icon-beaches .path10:before {
+  content: "\e909";
+  margin-left: -1em;
+  color: rgb(4, 6, 7);
+}
+.icon-beaches .path11:before {
+  content: "\e90a";
+  margin-left: -1em;
+  color: rgb(4, 6, 7);
+}
+.icon-beaches .path12:before {
+  content: "\e90b";
+  margin-left: -1em;
+  color: rgb(4, 6, 7);
+}
+.icon-beaches .path13:before {
+  content: "\e90c";
+  margin-left: -1em;
+  color: rgb(4, 6, 7);
+}
+.icon-beaches .path14:before {
+  content: "\e90d";
+  margin-left: -1em;
+  color: rgb(4, 6, 7);
+}
+.icon-beaches .path15:before {
+  content: "\e90e";
+  margin-left: -1em;
+  color: rgb(4, 6, 7);
+}
+.icon-beaches .path16:before {
+  content: "\e90f";
+  margin-left: -1em;
+  color: rgb(4, 6, 7);
+}
+.icon-beaches .path17:before {
+  content: "\e910";
+  margin-left: -1em;
+  color: rgb(4, 6, 7);
+}
+.icon-beaches .path18:before {
+  content: "\e911";
+  margin-left: -1em;
+  color: rgb(4, 6, 7);
+}
+.icon-beaches .path19:before {
+  content: "\e912";
+  margin-left: -1em;
+  color: rgb(4, 6, 7);
+}
+.icon-beaches .path20:before {
+  content: "\e913";
+  margin-left: -1em;
+  color: rgb(4, 6, 7);
+}
+.icon-beaches .path21:before {
+  content: "\e914";
+  margin-left: -1em;
+  color: rgb(4, 6, 7);
+}
+.icon-beaches .path22:before {
+  content: "\e915";
+  margin-left: -1em;
+  color: rgb(4, 6, 7);
+}
+.icon-beaches .path23:before {
+  content: "\e916";
+  margin-left: -1em;
+  color: rgb(4, 6, 7);
+}
+.icon-beaches .path24:before {
+  content: "\e917";
+  margin-left: -1em;
+  color: rgb(4, 6, 7);
+}
+.icon-beaches .path25:before {
+  content: "\e918";
+  margin-left: -1em;
+  color: rgb(4, 6, 7);
+}
+.icon-beaches .path26:before {
+  content: "\e919";
+  margin-left: -1em;
+  color: rgb(4, 6, 7);
+}
+.icon-beaches .path27:before {
+  content: "\e91a";
+  margin-left: -1em;
+  color: rgb(4, 6, 7);
+}
+.icon-beaches .path28:before {
+  content: "\e91b";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-beaches .path29:before {
+  content: "\e91c";
+  margin-left: -1em;
+  color: rgb(4, 6, 7);
+}
+.icon-beaches .path30:before {
+  content: "\e91d";
+  margin-left: -1em;
+  color: rgb(4, 6, 7);
+}
+.icon-beaches .path31:before {
+  content: "\e91e";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-align-right:before {
+  content: "\f038";
+}
+.icon-chevron-right:before {
+  content: "\f054";
+}
+.icon-twitter:before {
+  content: "\f099";
+}
+.icon-facebook:before {
+  content: "\f09a";
+}
+.icon-google-plus:before {
+  content: "\f0d5";
+}
+.icon-angle-right:before {
+  content: "\f105";
+}
+.icon-pinterest-p:before {
+  content: "\f231";
+}
+.icon-calendar:before {
+  content: "\e953";
+}
+

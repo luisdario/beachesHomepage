@@ -1,0 +1,560 @@
+@font-face {
+font-family: 'Bebas';
+font-style: normal;
+font-weight: normal;
+src: local('Bebas'), url('../fonts/bebasmod.woff') format('woff');
+}
+@font-face {
+font-family: 'Yellow';
+font-style: normal;
+font-weight: normal;
+src: local('Yellow'), url('../fonts/yellow-modregular.woff') format('woff');
+}
+
+body {
+    font-family: "Helvetica Neue", sans-serif;
+    display: block;    
+}
+header{
+    background: linear-gradient(to bottom, #373737 0%,#373737 29%,#e3e3e3 29%,#f8f9f9 100%);
+    height: 86px;
+}
+.container{
+    width:960px;
+    margin: auto;
+}
+.logo{
+    width:183px;
+    float: left;
+    height: 86px;
+    background-color: #00abe6;
+    color:white;
+}
+.logo img{
+    width:183px;
+    height:86px;
+    object-fit: cover;
+    margin-top: -8px;
+}
+a:hover.logo{
+    background-color: #1AC4FF
+}
+#logo img{
+    width: 235px;
+    height: 61px;
+    object-fit: cover;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+.navbars{
+    float:left;
+    width:692px;
+    padding-left: 10px;
+    height:86px;
+}
+.list-inline > li{
+    list-style: none;
+    display: inline-block;
+}
+#topMenu {
+    height:25px;
+    width: 567px;
+float: left;
+}
+#topMenu > li a{
+    font: normal 11px "Arial Bold", sans-serif;
+    line-height: 14px;
+    color: #acacac;
+    text-align: left;
+    text-decoration: none;
+    padding:11px 9px;
+}
+
+#topMenu a:hover{
+    color:#00abe6;
+}
+#mainMenu {
+    height: 62px;
+}
+#mainMenu > li{
+    padding: 15px 5px;
+}
+#mainMenu >li a{
+    font:  18px "Bebas", sans-serif;
+    font-weight: 500;
+    line-height: 14.35px;
+    color: #373737;
+    text-transform: uppercase;
+    padding: 11px 9px;
+    display: block;
+}
+#mainMenu li:hover{
+    background-color: #373737;
+}
+#mainMenu li:hover > a{
+    color:white;
+}
+.bookNow {
+    color:white;
+    background-color: #00abe6;
+    width: 74px;
+    height: 61px;
+    position: relative;
+    float: right;
+    top:25px;
+}
+.langDrop{
+    position: absolute;
+    float: right;
+    width:125px;
+    padding-left: 74px;
+}
+a.langDrop{
+    font: 11px/14px "Arial Bold",sans-serif;
+    color: rgb(172, 172, 172);
+    text-decoration: none;
+    text-align: right;
+    padding-top: 4px;
+}
+a:hover.bookNow {
+    background-color: #1AC4FF;
+}
+.spanBook{
+    text-transform: uppercase;
+    line-height: 3px;
+    letter-spacing: -1px;
+}
+.spanNow{
+    text-transform: uppercase;
+    line-height: 3px;
+    font-size: 18px;
+}
+.hide-text {
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+}
+a{
+    text-decoration: none;
+    color: #00abe6;
+}
+a.socialLink {
+    color: #979797;
+    font-family: "beachesFonts";
+    width:43px !important;
+    height: 33px !important;
+    
+}
+a.socialLink:hover {
+    color: #00abe6;
+}
+
+.sliderContainer{
+    position: relative;
+    background-color: #373737;
+}
+.sliderContainer img{
+    display: block;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.share{
+    padding-top:22px;
+    padding-bottom: 21px;
+    float:right
+}
+ul#social > li {
+    width:43px;
+    height:29px;
+    border-left: 2px solid #ebebeb;
+}
+#social >li i{
+    padding:5px 16px; 
+    font-size: 22px;
+}
+#social >li:last-child {
+    border-right: 2px solid #ebebeb;
+}
+
+.forEveryone > ul li a{
+    display:block;
+    position: relative;
+}
+.shapedLink .circleBorder {
+    border-radius: 50%;
+    position: relative;
+    width:121px;
+    height: 122px;
+    display: block;
+    border: 6px solid #e8e8e8;
+    overflow: hidden;
+}
+.shapedLink span.typo{
+    position: absolute;
+    bottom: -21px;
+    left:50%;
+    width:122px;
+    padding: 6px 0 7px;
+    margin-left: -62px;
+    text-align: center;
+    font-family: "Yellow";
+    color:#00abe6;
+    background: white;
+    font-size: 22px;
+}
+
+.shapedLink span.typo::after{
+    transform: rotate(-2deg);
+    position:absolute;
+    top:-4px;
+    left:-6px;
+    z-index:-1;
+    width:135px;
+    height: 43px;
+    background: #ebebeb;
+    content: "";
+}
+a:hover .circleBorder{
+    border-color: #00abe6;
+}
+a:hover .typo::after{
+    background: #00abe6;
+}
+
+.b{
+    font-weight: bold;
+}
+
+.introTitle{
+    text-transform: uppercase;
+    font-family: "Bebas";
+    font-size: 52.3px;
+    padding-top: 23px;
+    padding-bottom: 12px;
+}
+.blueFont{
+    font-family: "Yellow";
+    font-size: 52.3px;
+    margin-top: 23px;
+    margin-bottom: 12px;
+    color:#00abe6;
+}
+.alignBottom{
+    vertical-align: bottom;
+}
+.row{
+    width:960px;
+    
+}
+
+img#homeHero{
+    z-index:1;
+}
+.mainArticle{
+    width:704px;
+    float:left;
+}
+.intro{
+    width:672px;
+    padding-bottom: 59px;
+    clear: both;
+}
+.intro p{
+    font: 16px "Arial Regular", sans-serif;
+    color:#666;
+    font-weight: 300;
+    line-height: 24px;
+    padding-top: 12px;
+}
+.forEveryone{
+    padding-bottom: 65px;
+}
+.sidebar{
+    width:235px;
+    float:right;
+    margin-top: -89px;
+    z-index: 2;
+    position: relative;
+}
+.countdownHeader{
+    border-top: 2px solid #ed8b75;
+    height:21px;
+    background-color: #ed5431;
+    color:white;
+    text-transform: uppercase;
+    font-size: 10px;
+    text-align: center;
+    padding: 9px 0px 7px 0px;
+}
+ad{
+    font-size: 16px;
+}
+.hourGlass{
+    height:31px;
+    background-color:#373737;
+    color: white; 
+    padding: 9px 0px 7px 0px;
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 3px;
+}
+span.tag{
+    font-size: 8px;
+    display: block;
+    text-transform: uppercase;
+}
+#colon{
+    vertical-align: super;
+}
+.promoBanner{
+    height:100px;
+    background-color: #00abe6;
+    border-top: 2px solid #85e0ff;
+    color:white;
+    text-align: center;
+    padding: 26px 30px 18px 19px;
+}
+.discount{
+    font-size: 85px;
+    display: inline-block;
+    padding-left: 25px;
+}
+a.specialPromo{
+    color:white;
+    text-transform: uppercase;
+    font-size: 12px;
+    display: block;
+}
+.sidebar img#countdown {
+    border-top-color: #ed8b75;
+}
+.sidebar img.discount{
+    background-color: #00abe6;
+    border-top:2px solid #85e0ff;
+    text-transform: uppercase;
+    width:235px;
+    height:201px;
+    color:white;
+    margin-top:-2px;
+    font-size: 29px;
+}
+span.saveTxt{
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+.left{
+    float: left;
+}
+.small{
+    font-size: 10px;
+}
+.allCaps{
+    text-transform: uppercase;
+    
+}
+.destination{
+    background-color: #d5d5d5;
+    height:147px;
+    padding: 11px;
+    border-radius: 3px;
+}
+.guests{
+    background-color: #d5d5d5;
+    height:36px;
+    padding: 11px;
+    margin-top:4px;
+    border-radius: 3px;
+}
+.rotate{
+    transform: rotate(180deg);
+}
+.bestPriceIcon{
+    width:9px;
+    color:#00abe6;
+    float:left;
+    text-align: right;
+    padding-left: 5px;
+}
+.selectWrapper span{
+    display: block;
+    display: block;
+    margin-top: 3px;
+}
+.inline{
+    display: inline-block;
+    vertical-align: top;
+}
+
+sup {
+    vertical-align: super;
+    text-transform: uppercase;
+    width: 55px;
+    display: inline-block;
+    position: absolute;
+    margin-left: -35px;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+/*** FORMS ***/
+input[type="text"]{
+    border: 1px solid;
+    border-color: #b4b4b4 transparent transparent #b4b4b4;
+}
+input[type="submit"]{
+    height: 39px;
+    width: 235px;
+    color:white;
+    font-size: 12px;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color:#ed5431;
+    border:none;
+    border-radius: 3px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+input[type="submit"]:hover{
+    background-color: #d83813;
+}
+
+input::placeholder { color: #777; font-size: 10px}
+select, option{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: linear-gradient(to bottom, #fefefe 0%,#eeeeee 100%);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+select{
+   margin-bottom: 6px;
+    width:213px;
+    height: 33px;
+    padding:5px;
+    border: none;
+    border-radius: 3px;
+    font-size: 14px;
+    line-height: 20px;
+    box-shadow: 0px 1px 3px #eee;
+}
+select.select-sm{
+    width:49px !important;
+    height: 36px !important;
+}
+option{
+    background-color: #f6f6f6 !important;
+    color:#666 !important;
+}
+select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+}
+arrow {position:relative}
+
+.selectWrapper{
+    width:101px;
+    height: auto;
+    float:left;
+}
+.selectWrapper::after{
+    content:"";
+    clear: both;
+}
+.selectWrapper::before{
+    content:"";
+    clear: both;
+}
+arrow:after {
+    content: url(../imgs/ic_keyboard_arrow_down_black_24dp_1x_copy.png);
+    right:8px; 
+    top:1px;
+    padding:0px 2px;
+    position:absolute;
+    pointer-events:none;
+    
+}
+arrow:before {
+    content:'';
+    width:20px; height:20px;
+    position:absolute;
+}
+.datePicker{
+    margin-bottom: 6px;
+    width:93px;
+    height: 27px;
+    border:none;
+    border-radius: 3px;
+    float: right;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+}
+a.ui-datepicker-next{
+    background-color:#676767 !important;
+    border:none !important;
+    border-color: #676767;
+}
+a.ui-state-hover.ui-datepicker-next-hover{
+    background-color:#676767 !important;
+    border:none !important;
+    border-color: #676767;
+}
+a.ui-datepicker-prev{
+    background-color:#fff !important;
+    border:none !important;
+    border-color: #fff;
+}
+a.ui-state-hover.ui-datepicker-prev-hover{
+    background-color:#676767 !important;
+    border:1px solid !important;
+    border-color: #676767;
+    border-radius: 3px;
+}
+
+a.ui-state-active{
+    background-color:#E65130 !important;
+    border:1px solid !important;
+    border-color: #E65130 !important;
+    border-radius: 3px !important;
+}
+a.ui-state-hover{
+    background-color:#E65130 !important;
+    border:1px solid !important;
+    border-color: #E65130 !important;
+    border-radius: 3px !important;
+}
+.ui-widget-header .ui-icon{
+    background-image: url("../imgs/ui-icons_ffffff_256x240.png") !important;
+}
+.pickerTrigger{
+    float: right;
+    font-size: 28px !important;
+    margin-left: 5px;
+    margin-top: 1px;
+    color: #666666;
+    cursor: pointer;
+}
+a:hover.pickerTrigger{
+    color:#040404;
+}
+label {
+    padding-top: 2px;
+    text-align: right;
+    font-size: 9px;
+    text-transform: uppercase;
+    width: auto;
+    word-wrap: break-word;
+    font-weight: 600;
+    margin-top:3px;
+}
+label.datepickerLabel{
+    font-size: 12px;
+    margin-top: 7px;
+    float: left;
+}
