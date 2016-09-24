@@ -1,39 +1,430 @@
 @font-face {
-font-family: 'Bebas';
-font-style: normal;
-font-weight: normal;
-src: local('Bebas'), url('../fonts/bebasmod.woff') format('woff');
+    font-family: 'Bebas';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Bebas'), url('../fonts/bebasmod.woff') format('woff');
 }
 @font-face {
-font-family: 'Yellow';
-font-style: normal;
-font-weight: normal;
-src: local('Yellow'), url('../fonts/yellow-modregular.woff') format('woff');
+    font-family: 'Yellow';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Yellow'), url('../fonts/yellow-modregular.woff') format('woff');
 }
+/* Icons */
+   @font-face {
+        font-family: 'BeachesIcons';
+        font-style: normal;
+        font-weight: normal;
+        src: local('BeachesIcons'), url('../fonts/beachesIcons.woff') format('woff');
+    }
 
-body {
+    [class^="icon-"], [class*=" icon-"] {
+      font:24px/24px 'BeachesIcons';
+      font-style:normal;font-weight:normal;
+      font-variant:normal;
+      text-transform:none;speak:none;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+
+    .icon-jamaican-villas:before {
+      content: "\e900";
+    }
+    .icon-global-gourmet:before {
+      content: "\e901";
+    }
+    .icon-together-nest-text:before {
+      content: "\e902";
+    }
+    .icon-together-nest:before {
+      content: "\e903";
+    }
+    .icon-washer-dryer:before {
+      content: "\e904";
+    }
+    .icon-instagram:before {
+      content: "\e905";
+    }
+    .icon-engagements:before {
+      content: "\e906";
+    }
+    .icon-honeymoons:before {
+      content: "\e907";
+    }
+    .icon-rtk:before {
+      content: "\e908";
+    }
+    .icon-weddings:before {
+      content: "\e909";
+    }
+    .icon-activities:before {
+      content: "\e90a";
+    }
+    .icon-arrow-down:before {
+      content: "\e90b";
+    }
+    .icon-arrow-left:before {
+      content: "\e90c";
+    }
+    .icon-arrow-right:before {
+      content: "\e90d";
+    }
+    .icon-arrow-up:before {
+      content: "\e90e";
+    }
+    .icon-arrow:before {
+      content: "\e90f";
+    }
+    .icon-beaches:before {
+      content: "\e910";
+    }
+    .icon-best-price:before {
+      content: "\e911";
+    }
+    .icon-bullet:before {
+      content: "\e912";
+    }
+    .icon-butler-elite:before {
+      content: "\e913";
+    }
+    .icon-butler:before {
+      content: "\e914";
+    }
+    .icon-cal:before {
+      content: "\e915";
+    }
+    .icon-check:before {
+      content: "\e916";
+    }
+    .icon-check2:before {
+      content: "\e917";
+    }
+    .icon-checkin:before {
+      content: "\e918";
+    }
+    .icon-checkout:before {
+      content: "\e919";
+    }
+    .icon-close:before {
+      content: "\e91a";
+    }
+    .icon-compass:before {
+      content: "\e91b";
+    }
+    .icon-contact:before {
+      content: "\e91c";
+    }
+    .icon-dan:before {
+      content: "\e91d";
+    }
+    .icon-details-arrivals:before {
+      content: "\e91e";
+    }
+    .icon-details-babysitting:before {
+      content: "\e91f";
+    }
+    .icon-details-bring:before {
+      content: "\e920";
+    }
+    .icon-details-butler:before {
+      content: "\e921";
+    }
+    .icon-details-charge:before {
+      content: "\e922";
+    }
+    .icon-details-checkin:before {
+      content: "\e923";
+    }
+    .icon-details-currency:before {
+      content: "\e924";
+    }
+    .icon-details-departure:before {
+      content: "\e925";
+    }
+    .icon-details-dress:before {
+      content: "\e926";
+    }
+    .icon-details-electric:before {
+      content: "\e927";
+    }
+    .icon-details-gift:before {
+      content: "\e928";
+    }
+    .icon-details-handicap:before {
+      content: "\e929";
+    }
+    .icon-details-laundry:before {
+      content: "\e92a";
+    }
+    .icon-details-medical:before {
+      content: "\e92b";
+    }
+    .icon-details-passport:before {
+      content: "\e92c";
+    }
+    .icon-details-private:before {
+      content: "\e92d";
+    }
+    .icon-details-requests:before {
+      content: "\e92e";
+    }
+    .icon-details-safe:before {
+      content: "\e92f";
+    }
+    .icon-details-scuba:before {
+      content: "\e930";
+    }
+    .icon-details-tips:before {
+      content: "\e931";
+    }
+    .icon-details-transfers:before {
+      content: "\e932";
+    }
+    .icon-details-weather:before {
+      content: "\e933";
+    }
+    .icon-details-wifi:before {
+      content: "\e934";
+    }
+    .icon-details:before {
+      content: "\e935";
+    }
+    .icon-dining-diet:before {
+      content: "\e936";
+    }
+    .icon-divider:before {
+      content: "\e937";
+    }
+    .icon-dollar:before {
+      content: "\e938";
+    }
+    .icon-download:before {
+      content: "\e939";
+    }
+    .icon-english-butler:before {
+      content: "\e93a";
+    }
+    .icon-extras-butler:before {
+      content: "\e93b";
+    }
+    .icon-extras-concierge:before {
+      content: "\e93c";
+    }
+    .icon-extras-handicap:before {
+      content: "\e93d";
+    }
+    .icon-extras-lovenest:before {
+      content: "\e93e";
+    }
+    .icon-extras-private-transfer:before {
+      content: "\e93f";
+    }
+    .icon-extras-room-service:before {
+      content: "\e940";
+    }
+    .icon-facebook:before {
+      content: "\e941";
+    }
+    .icon-flipbook:before {
+      content: "\e942";
+    }
+    .icon-foundation:before {
+      content: "\e943";
+    }
+    .icon-fowlcay:before {
+      content: "\e944";
+    }
+    .icon-gplus:before {
+      content: "\e945";
+    }
+    .icon-grandpineapple:before {
+      content: "\e946";
+    }
+    .icon-grid:before {
+      content: "\e947";
+    }
+    .icon-handicap:before {
+      content: "\e948";
+    }
+    .icon-islandroutes:before {
+      content: "\e949";
+    }
+    .icon-laptop:before {
+      content: "\e94a";
+    }
+    .icon-list:before {
+      content: "\e94b";
+    }
+    .icon-lovenest:before {
+      content: "\e94c";
+    }
+    .icon-map:before {
+      content: "\e94d";
+    }
+    .icon-padi-learning:before {
+      content: "\e94e";
+    }
+    .icon-padi:before {
+      content: "\e94f";
+    }
+    .icon-person:before {
+      content: "\e950";
+    }
+    .icon-photo:before {
+      content: "\e951";
+    }
+    .icon-pinterest:before {
+      content: "\e952";
+    }
+    .icon-plus:before {
+      content: "\e953";
+    }
+    .icon-press:before {
+      content: "\e954";
+    }
+    .icon-privatevillas:before {
+      content: "\e955";
+    }
+    .icon-redlane:before {
+      content: "\e956";
+    }
+    .icon-rss:before {
+      content: "\e957";
+    }
+    .icon-sandals-select:before {
+      content: "\e958";
+    }
+    .icon-sandals:before {
+      content: "\e959";
+    }
+    .icon-select:before {
+      content: "\e95a";
+    }
+    .icon-share-link:before {
+      content: "\e95b";
+    }
+    .icon-share:before {
+      content: "\e95c";
+    }
+    .icon-snapshots:before {
+      content: "\e95d";
+    }
+    .icon-square-check:before {
+      content: "\e95e";
+    }
+    .icon-tag:before {
+      content: "\e95f";
+    }
+    .icon-tri-down:before {
+      content: "\e960";
+    }
+    .icon-tri-left:before {
+      content: "\e961";
+    }
+    .icon-tri-right:before {
+      content: "\e962";
+    }
+    .icon-tri-up:before {
+      content: "\e963";
+    }
+    .icon-twitter:before {
+      content: "\e964";
+    }
+    .icon-video:before {
+      content: "\e965";
+    }
+    .icon-vrx:before {
+      content: "\e966";
+    }
+    .icon-weddingmoons:before {
+      content: "\e967";
+    }
+    .icon-wp-lazy:before {
+      content: "\e968";
+    }
+    .icon-wp-pirate:before {
+      content: "\e969";
+    }
+    .icon-wp-slide:before {
+      content: "\e96a";
+    }
+    .icon-wp-surf:before {
+      content: "\e96b";
+    }
+    .icon-zoom:before {
+      content: "\e96c";
+    }
+    .icon-anniversaries:before {
+      content: "\e96d";
+    }
+    .icon-wmblog:before {
+      content: "\e96e";
+    }
+    .icon-checkmark:before {
+      content: "\e96f";
+    }
+    .icon-world:before {
+      content: "\e970";
+    }
+    .icon-headset:before {
+      content: "\e971";
+    }
+    .icon-divesite:before {
+      content: "\e972";
+    }
+    .icon-details-mobile:before {
+      content: "\e973";
+    }
+    .icon-global-gourmet-2:before {
+      content: "\e974";
+    }
+
+
+
+/* General */
+body{
     font-family: "Helvetica Neue", sans-serif;
     display: block;    
 }
-header{
+.main-header{
+    background: url(../imgs/headerBG.png) repeat;
     background: linear-gradient(to bottom, #373737 0%,#373737 29%,#e3e3e3 29%,#f8f9f9 100%);
     height: 86px;
 }
 .container{
-    width:960px;
+    width: 960px;
     margin: auto;
+    position: relative;
 }
 .logo{
-    width:183px;
+    width: 183px;
     float: left;
     height: 86px;
     background-color: #00abe6;
-    color:white;
+    color: white;
+    display: block;
 }
-.logo img{
+.logoPrimary{
     width:183px;
     height:86px;
-    object-fit: cover;
+    color:white;
+    font-family: "Bebas";
+    font-size: 13px;
+    display: block;
+    text-transform: uppercase;
+    text-align: center;
+}
+.logoPrimary i{
+    font-size: 69px;
+    text-align: center;
+    display: block;
+    line-height: 63px;
+}
+.logo img{
+    width: 183px;
+    height: 86px;
+    object-fit: cover; /* crossbrowser incompatibility caniuse */
     margin-top: -8px;
 }
 a:hover.logo{
@@ -42,56 +433,55 @@ a:hover.logo{
 #logo img{
     width: 235px;
     height: 61px;
-    object-fit: cover;
+    object-fit: cover; /* crossbrowser incompatibility caniuse */
     padding-top: 14px;
     padding-bottom: 14px;
 }
 .navbars{
     float:left;
-    width:692px;
+    width:767px;
     padding-left: 10px;
     height:86px;
 }
 .list-inline > li{
     list-style: none;
     display: inline-block;
+    font-size: 0; /* reduce white space between elements */
 }
-#topMenu {
+.topMenu {
     height:25px;
     width: 567px;
-float: left;
+    float: left;
 }
-#topMenu > li a{
+.topMenu > a{
     font: normal 11px "Arial Bold", sans-serif;
     line-height: 14px;
     color: #acacac;
     text-align: left;
     text-decoration: none;
-    padding:11px 9px;
+    padding:8px 9px;
 }
-
-#topMenu a:hover{
+.topMenu a:hover{
     color:#00abe6;
 }
-#mainMenu {
+.mainMenu {
     height: 62px;
+    float: left;
+    clear: both;
 }
-#mainMenu > li{
-    padding: 15px 5px;
-}
-#mainMenu >li a{
+.mainNav >li a{
     font:  18px "Bebas", sans-serif;
     font-weight: 500;
     line-height: 14.35px;
     color: #373737;
     text-transform: uppercase;
-    padding: 11px 9px;
+    padding: 24px 11px;
     display: block;
 }
-#mainMenu li:hover{
+.mainMenu li:hover{
     background-color: #373737;
 }
-#mainMenu li:hover > a{
+.mainMenu li:hover > a{
     color:white;
 }
 .bookNow {
@@ -99,22 +489,14 @@ float: left;
     background-color: #00abe6;
     width: 74px;
     height: 61px;
-    position: relative;
     float: right;
     top:25px;
 }
 .langDrop{
     position: absolute;
+    padding: 4px 0px 0px !important;
     float: right;
-    width:125px;
-    padding-left: 74px;
-}
-a.langDrop{
-    font: 11px/14px "Arial Bold",sans-serif;
-    color: rgb(172, 172, 172);
-    text-decoration: none;
-    text-align: right;
-    padding-top: 4px;
+    right: 0px;
 }
 a:hover.bookNow {
     background-color: #1AC4FF;
@@ -223,7 +605,26 @@ a:hover .circleBorder{
 a:hover .typo::after{
     background: #00abe6;
 }
-
+.everyCouple{
+    background: url(../imgs/everySprite.png) 0 0;
+}
+.everyFamily{
+    background: url(../imgs/everySprite.png) 146px 0;
+}
+.everyFriend{
+    background: url(../imgs/everySprite.png) -51px 246px;
+}
+.everyGroup{
+    background: url(../imgs/everySprite.png) 132px 250px;
+}
+.everyWedding{
+    background: url(../imgs/everySprite.png) -37px 118px;
+}
+.sprite{
+    width: 133px;
+    height: 134px;
+    position: absolute;
+}
 .b{
     font-weight: bold;
 }
@@ -289,17 +690,22 @@ img#homeHero{
     text-align: center;
     padding: 9px 0px 7px 0px;
 }
-ad{
-    font-size: 16px;
+.timer{
+    font-size: 22px !important;
+}
+.ad{
+    font-size: 19px;
+}
+.countdown{
+    margin-bottom: 17px;
 }
 .hourGlass{
-    height:31px;
+    height:34px;
     background-color:#373737;
     color: white; 
     padding: 9px 0px 7px 0px;
     font-size: 22px;
     text-align: center;
-    margin-bottom: 3px;
 }
 span.tag{
     font-size: 8px;
@@ -341,6 +747,12 @@ a.specialPromo{
     margin-top:-2px;
     font-size: 29px;
 }
+.beaches-sideLogo{
+    color: #00abe6;
+    font-size: 53px;
+    padding:6px 0px;
+    text-align: center;
+}
 span.saveTxt{
     letter-spacing: 1px;
     font-size: 20px;
@@ -377,6 +789,7 @@ span.saveTxt{
     float:left;
     text-align: right;
     padding-left: 5px;
+    line-height: 10px;
 }
 .selectWrapper span{
     display: block;
@@ -432,8 +845,8 @@ select, option{
     box-sizing: border-box;
 }
 
-select{
-   margin-bottom: 6px;
+.mySelect{
+    margin-bottom: 6px;
     width:213px;
     height: 33px;
     padding:5px;
@@ -443,9 +856,15 @@ select{
     line-height: 20px;
     box-shadow: 0px 1px 3px #eee;
 }
-select.select-sm{
+.select-sm{
     width:49px !important;
     height: 36px !important;
+    position: relative;
+    float: right;
+    border: none;
+    border-radius: 3px;
+    font-size: 14px;
+    box-shadow: 0px 1px 3px #eee;
 }
 option{
     background-color: #f6f6f6 !important;
@@ -455,8 +874,22 @@ select:-moz-focusring {
     color: transparent;
     text-shadow: 0 0 0 #000;
 }
-arrow {position:relative}
-
+.customSelect:after{
+    content: url(../imgs/ic_keyboard_arrow_down_black_24dp_1x_copy.png);    
+    position: absolute; 
+    right: 16px;  
+    padding-top: 5px;
+    z-index: 1;    
+    pointer-events: none; 
+}
+.select-sm:after{
+    content: url(../imgs/ic_keyboard_arrow_down_black_24dp_1x_copy.png);    
+    position: absolute; 
+    right: 4px;  
+    padding-top: 6px;
+    z-index: 1;    
+    pointer-events: none; 
+}
 .selectWrapper{
     width:101px;
     height: auto;
@@ -470,20 +903,7 @@ arrow {position:relative}
     content:"";
     clear: both;
 }
-arrow:after {
-    content: url(../imgs/ic_keyboard_arrow_down_black_24dp_1x_copy.png);
-    right:8px; 
-    top:1px;
-    padding:0px 2px;
-    position:absolute;
-    pointer-events:none;
-    
-}
-arrow:before {
-    content:'';
-    width:20px; height:20px;
-    position:absolute;
-}
+
 .datePicker{
     margin-bottom: 6px;
     width:93px;
@@ -536,7 +956,7 @@ a.ui-state-hover{
     float: right;
     font-size: 28px !important;
     margin-left: 5px;
-    margin-top: 1px;
+    margin-top: 5px;
     color: #666666;
     cursor: pointer;
 }

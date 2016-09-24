@@ -6,6 +6,41 @@
     });
 
     $("#frmBooking").trigger("reset");
+     
+    //Selects
+     $("#destination").on('change', function() {
+          var element = $(this);
+          var selection = element.val();
+
+          if(selection === "Jamaica"){
+              $("#resort").val("Negril");
+          }
+          else {
+              if(selection === "Turks And Caicos Islands"){
+                  $("#resort").val("Turks");
+              } else{
+                  $("#resort").val("Select Resort");
+              }
+          }
+      });
+     
+      $("#resort").on('change', function() {
+          var element = $(this);
+          var selection = element.val();
+
+          if( (selection === "Negril") || (selection === "Rios") ){
+              $("#destination").val("Jamaica");
+          }
+          else {
+              if(selection === "Turks"){
+                  $("#destination").val("Turks And Caicos Islands");
+              } else{
+                  $("#destination").val("Select Destination");
+              }
+          }
+      });
+     
+    //Datepickers
     var minCheckIn = addDays(new Date(), 3);
     var minCheckOut = addDays(new Date(), 6);
     
