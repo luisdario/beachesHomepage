@@ -4,15 +4,16 @@
          <!--[if lt IE 9]>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
           <![endif]-->
-        <title>Beaches resorts for everyone</title>
+        <title>All-inclusive Resorts &amp; Beach Vacations | Beaches</title>
         <meta charset="utf-8">
         <meta name="author" content="Luis Peña">
         <meta name="description" content="Beaches resorts for everyone">
         <meta name="keywords" content="beaches, sandals, resorts">
+        <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
         
         <link rel="stylesheet" type="text/css" href="css/reset.css">
         <link rel="stylesheet" type="text/css" href="css/main.css">
-        <link href="js/jquery-ui.css" rel="stylesheet">
+         <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head> 
     <body>
@@ -49,197 +50,365 @@
                             <li><a href="#" title="Specials">Specials</a></li>
                         </ul>
                     </nav>
-                    <a id="#bookNow" href="#" title="BookNow" class="bookNow">
-                        <div style="padding:13px 17px 0px;">
-                            <span class="spanBook">BOOK</span>
-                            <span class="spanNow">NOW</span>
+                    <div class="dropdown">
+                        <a id="bookNow" title="BookNow" class="bookNow">
+                            <div style="padding:13px 17px 0px;">
+                                <span class="spanBook">BOOK</span>
+                                <span class="spanNow">NOW</span>
+                            </div>
+                        </a>
+                        <div id="myDropdown" class="dropdown-content">
+                            <form id="frmBookingBlck" class="frmBookNow" style="margin-top: 18px;">
+                                <div class="">
+                                    <div class="accWrapper marg-bot">
+                                        <!--<div class="accordion">
+                                            Select Destination
+                                            <div class="arrow"></div>
+                                        </div>
+                                        <ul class="panel">
+                                            <li class="selected" data-val="def"><a href="#">Select Destination</a></li>
+                                            <li data-val="JM"><a href="#"> Jamiaca</a> </li>
+                                            <li data-val="TC"><a href="#"> Turks &amp; Caicos Island </a></li>
+                                        </ul>-->
+                                        
+                                        <select id="destination" class="selCountry accordion">
+                                            <option>Select Destination</option>
+                                            <option>Jamaica</option>
+                                            <option>Turks And Caicos Islands</option>
+                                        </select>
+                                        <div class="arrow"></div>
+                                    </div>
+                                    <div class="accWrapper marg-bot">
+                                        <!--<div class="accordion">
+                                            Select Resort
+                                            <div class="arrow"></div>
+                                        </div>
+                                        <ul class="panel">
+                                            <li class="selected"><a href="#"> Select Resort</a></li>
+                                            <li><a href="#"> Beaches Negril</a></li>
+                                            <li><a href="#"> Beaches Ocho Rios</a></li>
+                                            <li><a href="#"> Beaches Turks &amp; Caicos</a></li>
+                                        </ul>-->
+                                        <select id="resort" class="selResort accordion">
+                                            <option>Select Resort</option>
+                                            <option value="Negril">Beaches Negril</option>
+                                            <option value="Rios">Beaches Ocho Rios</option>
+                                            <option value="Turks">Beaches Turks &amp; Caicos</option>
+                                        </select>
+                                        <div class="arrow"></div>
+                                    </div>
+                                    <div class="accWrapper marg-bot">
+                                        <div class="accordion picker">
+                                            <a class="pickerTrigger acc icon-cal"></a>
+                                            <input class="checkIn datePicker pickDate" type="text" id="dateIn" value="Select Check In Date" readonly="readonly">
+                                        </div>
+                                        <!--<div class="accordion showPicker">
+                                            Select Check-In Date
+                                            <div class="arrow"></div>
+                                        </div>
+                                        <div id="chkIn" class="panel checkIn"></div>-->
+                                    </div>
+                                    <div class="accWrapper marg-bot">
+                                        <div class="accordion picker">
+                                            <a class="pickerTrigger acc icon-cal"></a>
+                                            <input class="checkOut datePicker pickDate" type="text" id="dateOut" value="Select Check Out Date" readonly="readonly">
+                                        </div>
+                                        <!--<div class="accordion showPicker">
+                                            Select Check-Out Date
+                                            <div class="arrow"></div>
+                                        </div>
+                                        <div id="chkOut" class="panel checkOut"></div>-->
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <div class="selectWrapper">
+                                        <label for="adults" class="inline">Adults<span>(Age 15+)</span></label>
+                                        <div class="accWrapper select-sm">
+                                            <div style="z-index:2;top:8px;right:7px" class="arrow"></div>
+                                            <select name="adultsSelect" id="adults" class="select-sm">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                                <option>6</option>
+                                                <option>7</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="selectWrapper" style="float:right; width:106px">
+                                        <label for="children" class="inline">Children<span>(Age 0-15)</span></label>
+                                        <div class="accWrapper select-sm">
+                                            <div style="z-index:2;top:8px;right:7px" class="arrow"></div>
+                                            <select name="childrenSelect" id="children" class="select-sm">
+                                                <option>0</option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <input type="submit" value= "check rates & availability" style="margin-top:10px; margin-bottom: 0px;">
+                                <a href="#" class="bOnline">
+                                    <i class="iconmoon-angle-right blue"></i>
+                                    Book online &amp; <span class="blue">save $35</span>
+                                </a>
+                            </form>
                         </div>
-                    </a>
+                    </div>
                 </div>
             </div>
         </header>
-        <div class="sliderContainer">
-            <img id="homeHero" src="imgs/hero.png" alt="Beaches promo" />
+        <div id="sliderBG" class="sliderContainer">
+            <img class="" src="imgs/sandals1.jpg">
+            <img class="" src="imgs/sandals2.jpg">
+            <img class="" src="imgs/sandals3.jpg">
+            <img class="" src="imgs/sandals4.jpg">
+            <img class="" src="imgs/sandals5.jpg">
+            <img class="" src="imgs/sandals6.jpg">
+            <img class="" src="imgs/sandals7.jpg">
+            <img class="" src="imgs/sandals8.jpg">
+            <img class="" src="imgs/sandals9.jpg">
+            <img class="" src="imgs/sandals10.jpg">
+            <img class="" src="imgs/sandals11.jpg">
         </div>
         
-        <section class="container">
-            <div class="mainArticle">
-                <div class="share">
-                    <ul id="social" class="list-inline">
-                        <li>
-                            <a href="#" title="Facebook page" class="socialLink"><i class="icon-facebook"></i></a>
-                        </li>
-                        <li>
-                            <a href="#" title="Twitter page" class="socialLink"><i class="icon-twitter"></i></a>
-                        </li>
-                        <li>
-                            <a href="#" title="Google+ page" class="socialLink"><i class="icon-gplus"></i></a>
-                        </li>
-                        <li>
-                            <a href="#" title="Pinterest page" class="socialLink"><i class="icon-pinterest"></i></a>
-                        </li>
-                    </ul>
-                </div>
-                <div id="introPH" class="intro">
-                    <div class="">
-                        <span class="introTitle">Bringing Everyone</span><span class="blueFont">Closer Together</span>
+        <section style="min-width:1024px;">
+            <div class="container">
+                <div class="mainArticle">
+                    <div class="share">
+                        <ul id="social" class="list-inline">
+                            <li>
+                                <a href="#" title="Facebook page" class="socialLink"><i class="icon-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" title="Twitter page" class="socialLink"><i class="icon-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" title="Google+ page" class="socialLink"><i class="icon-gplus"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" title="Pinterest page" class="socialLink"><i class="icon-pinterest"></i></a>
+                            </li>
+                        </ul>
                     </div>
-                    <p>
-                        <span class="b">Your perfect family getaway awaits you at Beaches</span> all inclusive Resorts in <a href="#" title="Jamaica">Jamaica</a> and <a href="#" title="Turks and Caicos">Turks and Caicos</a>. Play on pristine, white-sand beaches caressed by crystal-clear seas. Spend your family vacation in <a href="#" title="Book Now">luxurious rooms and suites</a>. Enjoy a whole array of incredibly exciting and fun activities for kids of every age. Truly, Beaches Luxury Included® vacation package deals in Jamaica and Turks &amp; Caicos promise unforgettable <a href="#" title="Families">family fun</a> beneath the Caribbean sun. 
-                    </p>
-                </div>
-                <div class="forEveryone">
-                    <ul class="list-inline">
-                        <li>
-                            <a class="shapedLink" href="#">
-                                <span class="circleBorder">
-                                    <i class="sprite everyCouple"></i>
-                                </span>
-                                <span class="typo">Couples</span>
-                            </a>
-                        </li> 
-                        <li>
-                            <a class="shapedLink" href="#">
-                                <span class="circleBorder">
-                                    <i class="sprite everyFamily"></i>
-                                </span>
-                                <span class="typo">Families</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="shapedLink" href="#">
-                                <span class="circleBorder">
-                                    <i class="sprite everyFriend"></i>
-                                </span>
-                                <span class="typo">Best Friends</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="shapedLink" href="#">
-                                <span class="circleBorder">
-                                    <i class="sprite everyGroup"></i>
-                                </span>
-                                <span class="typo">Groups</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="shapedLink" href="#">
-                                <span class="circleBorder">
-                                    <i class="sprite everyWedding"></i>
-                                </span>
-                                <span class="typo">Weddingmoons</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        <aside class="sidebar">
-                <div id="promo">
-                    <div class="countdown">
-                        <div class="countdownHeader">
-                            <span class="ad">Hurry! </span>last day to save
+                    <div id="introPH" class="intro">
+                        <div class="">
+                            <span class="introTitle">Bringing Everyone</span><span class="blueFont">Closer Together</span>
                         </div>
-                        <div class="hourGlass">
-                            <ul class="promoTimer list-inline">
-                                <li id="days" class="timer">08<span class="tag">Days</span></li>
-                                <li id="colon" class="timer">:</li>
-                                <li id="hours" class="timer">17<span class="tag">Hours</span></li>
-                                <li id="colon" class="timer">:</li>
-                                <li id="minutes" class="timer">23<span class="tag">Minutes</span></li>
-                                <li id="colon" class="timer">:</li>
-                                <li id="seconds" class="timer">45<span class="tag">Seconds</span></li>
-                            </ul>
-                        </div>
-                        <div class="promoBanner">
-                            <a href="#" style="color:white">
-                                <sup><span class="saveTxt">save</span> up to</sup>
-                                <sub class="discount">65</sub>
-                                <sup style="font-size: 58px; margin-left: -4px; font-weight: 900;">%</sup>
-                                <a href="#" class="specialPromo">
-                                    <i class="icon-angle-right"></i> View Details
+                        <p>
+                            <span class="b">Your perfect family getaway awaits you at Beaches</span> all inclusive Resorts in <a href="#" title="Jamaica">Jamaica</a> and <a href="#" title="Turks and Caicos">Turks and Caicos</a>. Play on pristine, white-sand beaches caressed by crystal-clear seas. Spend your family vacation in <a href="#" title="Book Now">luxurious rooms and suites</a>. Enjoy a whole array of incredibly exciting and fun activities for kids of every age. Truly, Beaches Luxury Included® vacation package deals in Jamaica and Turks &amp; Caicos promise unforgettable <a href="#" title="Families">family fun</a> beneath the Caribbean sun. 
+                        </p>
+                    </div>
+                    <div class="forEveryone">
+                        <ul class="list-inline">
+                            <li>
+                                <a class="shapedLink" href="#">
+                                    <span class="circleBorder">
+                                        <i class="sprite everyCouple"></i>
+                                    </span>
+                                    <span class="typo">Couples</span>
                                 </a>
-                            </a>
-                        </div>
+                            </li> 
+                            <li>
+                                <a class="shapedLink" href="#">
+                                    <span class="circleBorder">
+                                        <i class="sprite everyFamily"></i>
+                                    </span>
+                                    <span class="typo">Families</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="shapedLink" href="#">
+                                    <span class="circleBorder">
+                                        <i class="sprite everyFriend"></i>
+                                    </span>
+                                    <span class="typo">Best Friends</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="shapedLink" href="#">
+                                    <span class="circleBorder">
+                                        <i class="sprite everyGroup"></i>
+                                    </span>
+                                    <span class="typo">Groups</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="shapedLink" href="#">
+                                    <span class="circleBorder">
+                                        <i class="sprite everyWedding"></i>
+                                    </span>
+                                    <span class="typo">Weddingmoons</span>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <div id="logo" style="" class="icon-beaches beaches-sideLogo">
-                    
-                </div>
-                <form id="frmBooking" style="margin-top: 18px;">
-                    <div class="destination">
-                        <div class="customSelect">
-                            <select id="destination" class="mySelect">
-                                <option>Select Destination</option>
-                                <option>Jamaica</option>
-                                <option>Turks And Caicos Islands</option>
-                            </select>
-                        </div>
-                        <div class="customSelect">
-                            <select id="resort" class="mySelect">
-                                <option>Select Resort</option>
-                                <option value="Negril">Beaches Negril</option>
-                                <option value="Rios">Beaches Ocho Rios</option>
-                                <option value="Turks">Beaches Turks &amp; Caicos</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label for="dateIn" class="datepickerLabel">Check-In</label>
-                            <a id="checkIn" class="pickerTrigger icon-cal" style="float:right;"></a>
-                            <input class="datePicker" type="text" id="dateIn" placeholder="Select a Date" readonly="readonly">
-
-                        </div>
-                        <div class="" style="clear:both">
-                            <label for="dateOut" class="datepickerLabel">Check-Out</label>
-                            <a class="pickerTrigger icon-cal" style="float:right;"></a>
-                            <input class="datePicker" type="text" id="dateOut" placeholder="Select a Date" readonly="readonly">
-
-                        </div>
-                    </div>
-                    <div class="guests">
-                        <div class="selectWrapper">
-                            <label for="adults" class="inline">Adults<span>(Age 15+)</span></label>
-                            <div class="select-sm">
-                                <select name="adultsSelect" id="adults" class="select-sm">
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                    <option>6</option>
-                                    <option>7</option>
-                                </select>
+            <aside class="sidebar">
+                    <div id="promo">
+                        <div class="countdown">
+                            <div class="countdownHeader">
+                                <span class="ad">Hurry! </span>last day to save
                             </div>
-                        </div>
-                        <div class="selectWrapper" style="float:right">
-                            <label for="children" class="inline">Children<span>(Age 0-15)</span></label>
-                            <div class="select-sm">
-                                <select name="childrenSelect" id="children" class="select-sm">
-                                    <option>0</option>
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                </select>
+                            <div class="hourGlass">
+                                <ul class="promoTimer list-inline">
+                                    <li id="days" class="timer">08<span class="tag">Days</span></li>
+                                    <li id="colon" class="timer">:</li>
+                                    <li id="hours" class="timer">17<span class="tag">Hours</span></li>
+                                    <li id="colon" class="timer">:</li>
+                                    <li id="minutes" class="timer">23<span class="tag">Minutes</span></li>
+                                    <li id="colon" class="timer">:</li>
+                                    <li id="seconds" class="timer">45<span class="tag">Seconds</span></li>
+                                </ul>
+                            </div>
+                            <div class="promoBanner">
+                                <a href="#" style="color:white">
+                                    <sup><span class="saveTxt">save</span> up to</sup>
+                                    <sub class="discount">65</sub>
+                                    <sup style="font-size: 58px; margin-left: -4px; font-weight: 900;">%</sup>
+                                    <a href="#" class="specialPromo">
+                                        <i class="icon-angle-right"></i> View Details
+                                    </a>
+                                </a>
                             </div>
                         </div>
                     </div>
-                    <input type="submit" value= "check rates & availability">
-                </form>
-                <div class="allCaps small b rotate bestPriceIcon" >
-                   <span class="iconmoon-align-right" style="font-size:9px; line-height:12px;"></span>
-                </div><span class="allCaps small b" style="float:left;">Best price guarantee</span>
-            </aside>
+                    <div id="logo" style="" class="icon-beaches beaches-sideLogo">
+
+                    </div>
+                    <form id="frmBooking" class="frmBookNow" style="margin-top: 18px;">
+                        <div class="destination">
+                            <div class="selectDestination accWrapper gray">
+                                <!--<div class="customSelect">
+                                    Select Destination
+                                    <div class="arrow"></div>
+                                </div>
+                                <ul class="panel">
+                                    <li class="selected def" data-val="def">Select Resort</li>
+                                    <li data-val="JM">Jamaica</li>
+                                    <li data-val="TC">Turks &amp; Caicos Islands</li>
+                                </ul>-->
+                                <div class="arrow"></div>
+                                <select id="destination" class="selCountry mySelect">
+                                    <option>Select Destination</option>
+                                    <option>Jamaica</option>
+                                    <option>Turks And Caicos Islands</option>
+                                </select>
+                            </div>
+                            <div class="selectResort accWrapper gray">
+                              <!--  <div class="customSelect">
+                                    Select Resort
+                                    <div class="arrow"></div>
+                                </div>-->
+                                <!--<ul class="panel">
+                                    <li class="selected def" data-val="def">Select Resort</li>
+                                    <li data-val="BN">Beaches Negril</li>
+                                    <li data-val="BOR"> Beaches Ocho Rios </li>
+                                    <li data-val="BTC">Beaches Turks &amp; Caicos</li>
+                                </ul>-->
+                                <div class="arrow"></div>
+                                <select id="resort" class="selResort mySelect">
+                                    <option>Select Resort</option>
+                                    <option value="Negril">Beaches Negril</option>
+                                    <option value="Rios">Beaches Ocho Rios</option>
+                                    <option value="Turks">Beaches Turks &amp; Caicos</option>
+                                </select>
+                                
+                            </div>
+                            <div>
+                                <label for="dateIn1" class="datepickerLabel">Check-In</label>
+                                <a  class="pickerTrigger icon-cal" style="float:right;"></a>
+                                <input class="checkIn datePicker" type="text" id="dateIn1" placeholder="Select a Date" readonly="readonly">
+
+                            </div>
+                            <div class="" style="clear:both">
+                                <label for="dateOut1" class="datepickerLabel">Check-Out</label>
+                                <a class="pickerTrigger icon-cal" style="float:right;"></a>
+                                <input class="checkOut datePicker" type="text" id="dateOut1" placeholder="Select a Date" readonly="readonly">
+
+                            </div>
+                        </div>
+                        <div class="guests">
+                            <div class="selectWrapper">
+                                <label for="adults" class="inline">Adults<span>(Age 15+)</span></label>
+                                <div class="accWrapper gray select-sm">
+                                    <div style="z-index:2;top:8px;right:7px" class="arrow"></div>
+                                    <select name="adultsSelect" id="adults" class="select-sm selAdult">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="selectWrapper" style="float:right; width:106px">
+                                <label for="children" class="inline">Children<span>(Age 0-15)</span></label>
+                                <div class="accWrapper gray select-sm">
+                                    <div style="z-index:2;top:8px;right:7px" class="arrow"></div>
+                                    <select name="childrenSelect" id="children" class="select-sm selChildren">
+                                        <option>0</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <input id="enviar" type="submit" value= "check rates & availability">
+                    </form>
+                    <div class="allCaps small b rotate bestPriceIcon" >
+                       <span class="iconmoon-align-right" style="font-size:9px; line-height:12px;"></span>
+                    </div><span class="allCaps small b" style="float:left;">Best price guarantee</span>
+                </aside>
+            </div>
         </section>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <script src="js/jquery-ui.js"></script>
-        <script src="js/booking.js"></script>
+        <script src="js/bSlider.js"></script>
+        <script src="js/booknow.js"></script>
+<!--    <script src="js/booking.js"></script>-->
         
         <script type="text/javascript">
             $(function() {
-              $(".pickerTrigger").on('click', function(){
-                  var id= $(this).next().attr('id');
-                  $("#"+id).datepicker("show");
-              })
+                //Slider
+                $(".sliderContainer").bSlider();
+                
+                //Dropdown booking
+                $("#frmBookingBlck").booking();
+                
+                //sidebar booking
+                $("#frmBooking").booking();
+                
+                //Book now Dropdown
+                $("#bookNow").on('click', function() {
+                   document.getElementById("myDropdown").classList.toggle("show");
+                });
+                
+                //For accordion selects
+               /* $(".customSelect").on('click', function() {
+                    var $this = $(this);
+                    var $options = $this.next(".panel");
+                    
+                    $this.toggleClass("active");
+                    $options.toggleClass("visible");
+                });*/
+                //Accordion
+                /*var acc = document.getElementsByClassName("accordion"),
+                    i;
+
+                for (i = 0; i < acc.length; i++) {
+                    acc[i].onclick = function(){
+                        this.classList.toggle("active");
+                        this.nextElementSibling.classList.toggle("visible");
+                    }
+                }*/
             });
         </script>
     </body>

@@ -383,21 +383,22 @@
 
 
 /* General */
-body{
+body {
     font-family: "Helvetica Neue", sans-serif;
     display: block;    
 }
-.main-header{
+.main-header {
     background: url(../imgs/headerBG.png) repeat;
     background: linear-gradient(to bottom, #373737 0%,#373737 29%,#e3e3e3 29%,#f8f9f9 100%);
     height: 86px;
+    min-width: 1024px;
 }
-.container{
+.container {
     width: 960px;
     margin: auto;
     position: relative;
 }
-.logo{
+.logo {
     width: 183px;
     float: left;
     height: 86px;
@@ -405,7 +406,7 @@ body{
     color: white;
     display: block;
 }
-.logoPrimary{
+.logoPrimary { 
     width:183px;
     height:86px;
     color:white;
@@ -415,35 +416,35 @@ body{
     text-transform: uppercase;
     text-align: center;
 }
-.logoPrimary i{
+.logoPrimary i {
     font-size: 69px;
     text-align: center;
     display: block;
     line-height: 63px;
 }
-.logo img{
+.logo img {
     width: 183px;
     height: 86px;
     object-fit: cover; /* crossbrowser incompatibility caniuse */
     margin-top: -8px;
 }
-a:hover.logo{
+a:hover.logo {
     background-color: #1AC4FF
 }
-#logo img{
+#logo img {
     width: 235px;
     height: 61px;
     object-fit: cover; /* crossbrowser incompatibility caniuse */
     padding-top: 14px;
     padding-bottom: 14px;
 }
-.navbars{
+.navbars {
     float:left;
     width:767px;
     padding-left: 10px;
     height:86px;
 }
-.list-inline > li{
+.list-inline > li {
     list-style: none;
     display: inline-block;
     font-size: 0; /* reduce white space between elements */
@@ -453,7 +454,7 @@ a:hover.logo{
     width: 567px;
     float: left;
 }
-.topMenu > a{
+.topMenu > a {
     font: normal 11px "Arial Bold", sans-serif;
     line-height: 14px;
     color: #acacac;
@@ -461,7 +462,7 @@ a:hover.logo{
     text-decoration: none;
     padding:8px 9px;
 }
-.topMenu a:hover{
+.topMenu a:hover {
     color:#00abe6;
 }
 .mainMenu {
@@ -469,7 +470,7 @@ a:hover.logo{
     float: left;
     clear: both;
 }
-.mainNav >li a{
+.mainNav >li a {
     font:  18px "Bebas", sans-serif;
     font-weight: 500;
     line-height: 14.35px;
@@ -478,11 +479,18 @@ a:hover.logo{
     padding: 24px 11px;
     display: block;
 }
-.mainMenu li:hover{
+.mainMenu li:hover {
     background-color: #373737;
 }
-.mainMenu li:hover > a{
+.mainMenu li:hover > a {
     color:white;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+    float: right;
+    cursor:pointer;
+   /* display: inline-block;*/
 }
 .bookNow {
     color:white;
@@ -492,7 +500,32 @@ a:hover.logo{
     float: right;
     top:25px;
 }
-.langDrop{
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #373737;
+    min-width: 266px;
+    max-height: 0px;
+    overflow: hidden;
+    right: 0;
+    top:100%;
+    z-index: 999;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    transition: 0.6s ease-in-out;
+
+}
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.show {
+    display: block;
+    max-height: 560px;
+    overflow: hidden;
+}
+.langDrop {
     position: absolute;
     padding: 4px 0px 0px !important;
     float: right;
@@ -501,12 +534,15 @@ a:hover.logo{
 a:hover.bookNow {
     background-color: #1AC4FF;
 }
-.spanBook{
+a:hover.logoPrimary {
+     background-color: #1AC4FF;
+}
+.spanBook {
     text-transform: uppercase;
     line-height: 3px;
     letter-spacing: -1px;
 }
-.spanNow{
+.spanNow {
     text-transform: uppercase;
     line-height: 3px;
     font-size: 18px;
@@ -518,7 +554,7 @@ a:hover.bookNow {
     background-color: transparent;
     border: 0;
 }
-a{
+a {
     text-decoration: none;
     color: #00abe6;
 }
@@ -533,17 +569,7 @@ a.socialLink:hover {
     color: #00abe6;
 }
 
-.sliderContainer{
-    position: relative;
-    background-color: #373737;
-}
-.sliderContainer img{
-    display: block;
-    width: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
-}
-.share{
+.share {
     padding-top:22px;
     padding-bottom: 21px;
     float:right
@@ -553,7 +579,7 @@ ul#social > li {
     height:29px;
     border-left: 2px solid #ebebeb;
 }
-#social >li i{
+#social >li i {
     padding:5px 16px; 
     font-size: 22px;
 }
@@ -561,7 +587,7 @@ ul#social > li {
     border-right: 2px solid #ebebeb;
 }
 
-.forEveryone > ul li a{
+.forEveryone > ul li a {
     display:block;
     position: relative;
 }
@@ -574,7 +600,7 @@ ul#social > li {
     border: 6px solid #e8e8e8;
     overflow: hidden;
 }
-.shapedLink span.typo{
+.shapedLink span.typo {
     position: absolute;
     bottom: -21px;
     left:50%;
@@ -588,7 +614,7 @@ ul#social > li {
     font-size: 22px;
 }
 
-.shapedLink span.typo::after{
+.shapedLink span.typo::after {
     transform: rotate(-2deg);
     position:absolute;
     top:-4px;
@@ -599,88 +625,93 @@ ul#social > li {
     background: #ebebeb;
     content: "";
 }
-a:hover .circleBorder{
+a:hover .circleBorder {
     border-color: #00abe6;
+    transition: 0.7s;
 }
-a:hover .typo::after{
+a:hover .typo::after {
     background: #00abe6;
+    transition: 0.7s;
 }
-.everyCouple{
-    background: url(../imgs/everySprite.png) 0 0;
-}
-.everyFamily{
-    background: url(../imgs/everySprite.png) 146px 0;
-}
-.everyFriend{
-    background: url(../imgs/everySprite.png) -51px 246px;
-}
-.everyGroup{
-    background: url(../imgs/everySprite.png) 132px 250px;
-}
-.everyWedding{
-    background: url(../imgs/everySprite.png) -37px 118px;
-}
-.sprite{
+.sprite {
     width: 133px;
     height: 134px;
     position: absolute;
+    background: url(../imgs/everySprite.png)
 }
-.b{
+
+.everyCouple {
+    background-position: 0px 0px;
+}
+.everyFamily {
+    background-position: 146px 0px;
+}
+.everyFriend {
+    background-position: -51px 246px;
+}
+.everyGroup {
+    background-position: 132px 250px;
+}
+.everyWedding {
+    background-position: -37px 118px;
+}
+
+.b {
     font-weight: bold;
 }
 
-.introTitle{
+.introTitle {
     text-transform: uppercase;
     font-family: "Bebas";
     font-size: 52.3px;
     padding-top: 23px;
     padding-bottom: 12px;
 }
-.blueFont{
+.blueFont {
     font-family: "Yellow";
     font-size: 52.3px;
     margin-top: 23px;
     margin-bottom: 12px;
     color:#00abe6;
 }
-.alignBottom{
+.alignBottom {
     vertical-align: bottom;
 }
-.row{
+.row {
     width:960px;
     
 }
 
-img#homeHero{
+img#homeHero {
     z-index:1;
 }
-.mainArticle{
+.mainArticle {
     width:704px;
     float:left;
 }
-.intro{
+.intro {
     width:672px;
     padding-bottom: 59px;
     clear: both;
 }
-.intro p{
+.intro p {
     font: 16px "Arial Regular", sans-serif;
     color:#666;
     font-weight: 300;
     line-height: 24px;
     padding-top: 12px;
 }
-.forEveryone{
+.forEveryone {
     padding-bottom: 65px;
 }
-.sidebar{
+.sidebar {
     width:235px;
     float:right;
     margin-top: -89px;
     z-index: 2;
     position: relative;
 }
-.countdownHeader{
+.countdownHeader {
     border-top: 2px solid #ed8b75;
     height:21px;
     background-color: #ed5431;
@@ -690,16 +721,16 @@ img#homeHero{
     text-align: center;
     padding: 9px 0px 7px 0px;
 }
-.timer{
+.timer {
     font-size: 22px !important;
 }
-.ad{
+.ad {
     font-size: 19px;
 }
-.countdown{
+.countdown {
     margin-bottom: 17px;
 }
-.hourGlass{
+.hourGlass {
     height:34px;
     background-color:#373737;
     color: white; 
@@ -707,15 +738,15 @@ img#homeHero{
     font-size: 22px;
     text-align: center;
 }
-span.tag{
+span.tag {
     font-size: 8px;
     display: block;
     text-transform: uppercase;
 }
-#colon{
+#colon {
     vertical-align: super;
 }
-.promoBanner{
+.promoBanner {
     height:100px;
     background-color: #00abe6;
     border-top: 2px solid #85e0ff;
@@ -723,12 +754,12 @@ span.tag{
     text-align: center;
     padding: 26px 30px 18px 19px;
 }
-.discount{
+.discount {
     font-size: 85px;
     display: inline-block;
     padding-left: 25px;
 }
-a.specialPromo{
+a.specialPromo {
     color:white;
     text-transform: uppercase;
     font-size: 12px;
@@ -737,7 +768,7 @@ a.specialPromo{
 .sidebar img#countdown {
     border-top-color: #ed8b75;
 }
-.sidebar img.discount{
+.sidebar img.discount {
     background-color: #00abe6;
     border-top:2px solid #85e0ff;
     text-transform: uppercase;
@@ -747,43 +778,43 @@ a.specialPromo{
     margin-top:-2px;
     font-size: 29px;
 }
-.beaches-sideLogo{
+.beaches-sideLogo {
     color: #00abe6;
     font-size: 53px;
     padding:6px 0px;
     text-align: center;
 }
-span.saveTxt{
+span.saveTxt {
     letter-spacing: 1px;
     font-size: 20px;
 }
-.left{
+.left {
     float: left;
 }
-.small{
+.small {
     font-size: 10px;
 }
-.allCaps{
+.allCaps {
     text-transform: uppercase;
     
 }
-.destination{
+.destination {
     background-color: #d5d5d5;
     height:147px;
     padding: 11px;
     border-radius: 3px;
 }
-.guests{
+.guests {
     background-color: #d5d5d5;
     height:36px;
     padding: 11px;
     margin-top:4px;
     border-radius: 3px;
 }
-.rotate{
+.rotate {
     transform: rotate(180deg);
 }
-.bestPriceIcon{
+.bestPriceIcon {
     width:9px;
     color:#00abe6;
     float:left;
@@ -791,12 +822,11 @@ span.saveTxt{
     padding-left: 5px;
     line-height: 10px;
 }
-.selectWrapper span{
-    display: block;
+.selectWrapper span {
     display: block;
     margin-top: 3px;
 }
-.inline{
+.inline {
     display: inline-block;
     vertical-align: top;
 }
@@ -811,13 +841,484 @@ sup {
     margin-top: 10px;
     font-size: 18px;
 }
+/** Slider **/
+
+.sliderContainer {
+    position: relative;
+    overflow: hidden;
+    min-width: 1024px;
+    height: 604px;
+}
+.sliderContainer .sliderContent {		
+	position:absolute;
+	display: table;
+    width: 1440px;
+    left: 50%;
+    margin-left: -720px;
+    height: 604px;
+}
+
+.sliderContent .current {
+    z-index: 2;
+}
+.nav{
+	z-index:1;
+    position: absolute;
+    top:40%;
+    width: 100%;
+    -moz-transform: translateY(50%);
+}
+.active {
+   opacity: 1 !important;
+   transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+}
+.slides {
+    position:relative;
+    width: 1440px;
+    height: 604px;
+}
+
+/*.nav div {
+	width:54px;
+	height:54px;
+	position:absolute;
+	top:40%;
+	cursor:pointer;
+}*/
+
+.leftnav {
+	left:1%;
+    background: url(../imgs/navbars.png) 0 0;
+}
+
+.rightnav {
+	right:1%;
+     background: url(../imgs/navbars.png) 0px 54px;
+}
+
+.leftnav:hover {
+	left:12px;
+    background: url(../imgs/navbars.png) 54px 0px;
+}
+
+.rightnav:hover {
+	right:18px;
+     background: url(../imgs/navbars.png) 54px 54px;
+}
+
+/*.dot-nav, .playSlides span, .indicator span, .indicator.current span:hover {
+    background: url(../imgs/sliderSprite.png)
+}*/
+.dot-nav {
+    position:absolute;
+    left:16.7%;
+/*    background-position: 0 0;*/
+    background: linear-gradient(to right, #000 0%,#fff 100%);
+    opacity: 0.56;
+    width: 793px;
+    height: 32px;
+    bottom: 0;
+}
+.dot-nav .list-inline:before {
+    content: "";
+    display: table;
+}
+.playSlides {
+    float: left;
+    width: 20px;
+    height: 20px;
+    padding: 7px 15px 5px 11px;
+}
+.playSlides span {
+    position: absolute;
+    border-radius: 3px;
+    background: linear-gradient(to bottom, #ffffff 0%,#e7e7e7 100%);
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    font-size: 17px;
+}
+.playSlides span:hover {
+    background: linear-gradient(to bottom, #0fc2fa 0%,#24a0cf 100%);
+    cursor: pointer;
+}
+.playSlides span.pause:before {
+    background-position: -248px -32px;
+    cursor: pointer;
+    content: "\ea1c";
+    color: black;
+}
+.playSlides span.pause:hover {
+    background-position: -270px -32px;
+    cursor: pointer;
+}
+.indicators {
+    position: relative;
+    border-left: 1px solid #c1c5bb;
+    margin-top: 7px;
+    float: left;
+}
+.dot-nav li.indicator {
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    margin: 0 3px;
+    vertical-align: middle;
+    padding-top: 4px;
+}
+.dot-nav li.indicator.current{
+    padding-top: 0px;
+}
+.dot-nav li.indicator > span:hover{
+    padding-top: 0px;
+}
+.indicator span {
+    display: inline-block;
+/*    background-position: -344px -32px;*/
+    width: 12px;
+    height: 12px;
+    background-color: #efefef;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.indicator span:hover {
+    /*    background-position: -328px -32px;*/
+    width: 12px;
+    height: 12px;
+    background-color: #01abe6;
+    border: 3px solid #efefef;
+    margin-top: -2px;
+}
+.indicator.current span {
+/*    background-position: -328px -32px;*/
+    width: 12px;
+    height: 12px;
+    background-color: #01abe6;
+    border: 3px solid #efefef;
+}
+.indicator.current span:hover {
+    /*    background-position: -328px -32px;*/
+    width: 12px;
+    height: 12px;
+    background-color: #01abe6;
+    border: 3px solid #efefef;
+    margin-top: 0px;
+}
+.image.current {
+    display:table;
+}
+/** Slider **/
+#frmBookingBlck {
+    padding: 10px;
+}
+.blue {
+    color: #01abe6;
+}
+a.bOnline {
+    width: 100%;
+    height: 30px;
+    background: #4b4b4b;
+    text-transform: uppercase;
+    padding: 0px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 30px;
+}
+a:hover.bOnline {
+    background: gray:
+}
+.accordion {
+    background: #666;
+    color: white;
+    width: 246px;
+    height: 32px;
+    padding: 5px;
+    cursor: pointer;
+    border: none;
+    text-align: left;
+    outline: none;
+    transition: 0.4s;
+    border-radius: 3px;
+    font-size: 14px;
+    line-height: 20px;
+}
+.accordion.marg-bot:hover {
+    background: gray;
+}
+.accordion.picker {
+    width: 228px;
+    height: 14px;
+    padding: 9px;
+    position: relative;
+    line-height: 14px;
+    cursor: default;
+}
+input.pickDate {
+    background: none;
+    border: none !important;
+    color: white !important;
+    font-size: 14px;
+    position: absolute;
+    left: 7px;
+    opacity: 1;
+    top: 2px;
+    width: 143px;
+    font-weight: 400;
+    margin: 0;
+    text-align: left;
+    cursor: default;
+    outline: none;
+}
+.accWrapper {
+    position: relative;
+}
+.accWrapper.gray .arrow:after {
+    background: #666;
+}
+.accWrapper.gray .arrow:before {
+    background: #666;
+}
+.accWrapper.focus.gray .arrow:after {
+    background: #666;
+}
+.accWrapper.focus.gray .arrow:before {
+    background: #666;
+}
+.accWrapper .arrow {
+    position: absolute;
+    float: right;
+    width: 18px;
+    height: 18px;
+    right: 10px;
+    top: 5px;
+}
+.accWrapper .arrow:after {
+    width: 10px;
+    height: 2px;
+    background: white;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 10px;
+    right: 0;
+    content: "";
+    transition: right .2s ease-in;
+}
+.accWrapper .arrow:before {
+    width: 10px;
+    height: 2px;
+    background: white;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 10px;
+    right: 6px;
+    content:"";
+    transition: right .2s ease-in;
+}
+.accWrapper.focus .arrow:after {
+    width: 10px;
+    height: 2px;
+    background: white;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 10px;
+    right: 4px;
+    content: "";
+}
+.accWrapper.focus .arrow:before {
+    width: 10px;
+    height: 2px;
+    background: white;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 10px;
+    right: 4px;
+    content:"";
+}
+
+.customSelect {
+    background: linear-gradient(to bottom, #fefefe 0%,#eeeeee 100%);
+    color: black;
+    width:202px;
+    height: 25px;
+    padding: 5px;
+    cursor: pointer;
+    border: none;
+    text-align: left;
+    outline: none;
+    transition: 0.4s;
+    border-radius: 3px;
+    font-size: 15px;
+    line-height: 24px;
+    margin-bottom: 5px;
+    position: relative;
+    z-index: 0 
+    
+}
+.customSelect .arrow {
+    position: relative;
+    float: right;
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+}
+.customSelect .arrow:after {
+    width: 10px;
+    height: 2px;
+    background: #666;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 10px;
+    right: 0;
+    content: "";
+    transition: right .2s ease-in;
+}
+.customSelect .arrow:before {
+    width: 10px;
+    height: 2px;
+    background: #666;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 10px;
+    right: 6px;
+    content:"";
+    transition: right .2s ease-in;
+}
+.customSelect.active .arrow:after {
+    width: 10px;
+    height: 2px;
+    background: #666;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 10px;
+    right: 4px;
+    content: "";
+}
+.customSelect.active .arrow:before {
+    width: 10px;
+    height: 2px;
+    background: #666;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 10px;
+    right: 4px;
+    content:"";
+}
+.panel {
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.6s ease-in-out;
+    opacity: 0;
+    border-radius: 3%;
+    font-size: 14px;
+    line-height: 0;
+}
+.destination .panel {
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.6s ease-in-out;
+    opacity: 0;
+    border-radius: 3%;
+    font-size: 14px;
+    line-height: 0;
+    position: absolute;
+}
+.destination ul.panel > li {
+    width: 100%;
+    height: 31px;
+    color: #666;
+    line-height: 26px;
+    padding-left: 5px;
+    border-bottom: 1px solid #e8e8e8;
+}
+.destination ul.panel > li a {
+    color: #666;
+    padding-left: 5px;
+    height: 7px;
+    line-height: 26px;
+    width: 100%;
+    height: 31px;
+}
+.destination ul.panel > li.selected{
+    background: #f6f6f6;
+    color: #01abe6;
+}
+.destination ul.panel > li:hover a {
+    color: #01abe6;
+}
+.destination ul.panel > li:hover {
+    background: #f6f6f6;
+    cursor: pointer;
+}
+.panel.visible {
+    opacity: 1;
+    max-height: 200px;
+    margin-top: 2px;
+}
+
+.selectDestination .panel.visible {
+    opacity: 1;
+    max-height: 200px;
+    width: 212px;
+    margin-top: -3px;
+    z-index: 9999;
+}
+.selectResort .panel.visible {
+    opacity: 1;
+    max-height: 200px;
+    width: 212px;
+    margin-top: -3px;
+    z-index: 9999;
+}
+div.panel {
+    height: 0;
+    transition: 0.6s ease-in-out;
+}
+div.panel.visible {
+    height: 155px;
+}
+ul.panel > li {
+    width: 100%;
+    height: 31px;
+    border-bottom: 1px solid #e8e8e8;
+}
+ul.panel > li a {
+    color: #666;
+    padding-left: 5px;
+    height: 7px;
+}
+ul.panel > li.selected a{
+    background: #f6f6f6;
+    color: #01abe6;
+}
+ul.panel > li a:hover {
+    background: #f6f6f6;
+    color: #01abe6;
+}
+.marg-bot {
+    margin-bottom: 10px;
+}
+#frmBookingBlck input[type = "submit"] {
+    width: 246px;
+}
+#frmBookingBlck .selectWrapper {
+    color:white;
+}
+#frmBookingBlck .select-sm {
+    box-shadow: none;
+    background: #666;
+    color: white;
+}
 
 /*** FORMS ***/
-input[type="text"]{
+input[type="text"] {
     border: 1px solid;
     border-color: #b4b4b4 transparent transparent #b4b4b4;
 }
-input[type="submit"]{
+input[type="submit"] {
     height: 39px;
     width: 235px;
     color:white;
@@ -831,21 +1332,25 @@ input[type="submit"]{
     margin-bottom: 4px;
 }
 
-input[type="submit"]:hover{
+input[type="submit"]:hover {
     background-color: #d83813;
 }
 
-input::placeholder { color: #777; font-size: 10px}
-select, option{
+input::placeholder { 
+    color: #777; 
+    font-size: 10px
+}
+select, option {
     -webkit-appearance: none;
     -moz-appearance: none;
     background: linear-gradient(to bottom, #fefefe 0%,#eeeeee 100%);
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    outline: none;
 }
 
-.mySelect{
+.mySelect {
     margin-bottom: 6px;
     width:213px;
     height: 33px;
@@ -856,7 +1361,7 @@ select, option{
     line-height: 20px;
     box-shadow: 0px 1px 3px #eee;
 }
-.select-sm{
+.select-sm {
     width:49px !important;
     height: 36px !important;
     position: relative;
@@ -866,15 +1371,11 @@ select, option{
     font-size: 14px;
     box-shadow: 0px 1px 3px #eee;
 }
-option{
-    background-color: #f6f6f6 !important;
-    color:#666 !important;
-}
+
 select:-moz-focusring {
-    color: transparent;
-    text-shadow: 0 0 0 #000;
+    outline: none;
 }
-.customSelect:after{
+.customS:before {
     content: url(../imgs/ic_keyboard_arrow_down_black_24dp_1x_copy.png);    
     position: absolute; 
     right: 16px;  
@@ -882,7 +1383,7 @@ select:-moz-focusring {
     z-index: 1;    
     pointer-events: none; 
 }
-.select-sm:after{
+.select-smX:after {
     content: url(../imgs/ic_keyboard_arrow_down_black_24dp_1x_copy.png);    
     position: absolute; 
     right: 4px;  
@@ -890,21 +1391,23 @@ select:-moz-focusring {
     z-index: 1;    
     pointer-events: none; 
 }
-.selectWrapper{
+.selectWrapper {
     width:101px;
     height: auto;
     float:left;
 }
-.selectWrapper::after{
+.selectWrapper::after {
     content:"";
     clear: both;
 }
-.selectWrapper::before{
+.selectWrapper::before {
     content:"";
     clear: both;
 }
-
-.datePicker{
+#adults, #children {
+    padding-left: 5px;
+}
+.datePicker {
     margin-bottom: 6px;
     width:93px;
     height: 27px;
@@ -915,44 +1418,44 @@ select:-moz-focusring {
     font-size: 12px;
     font-weight: 600;
 }
-a.ui-datepicker-next{
+a.ui-datepicker-next {
     background-color:#676767 !important;
     border:none !important;
     border-color: #676767;
 }
-a.ui-state-hover.ui-datepicker-next-hover{
+a.ui-state-hover.ui-datepicker-next-hover {
     background-color:#676767 !important;
     border:none !important;
     border-color: #676767;
 }
-a.ui-datepicker-prev{
+a.ui-datepicker-prev {
     background-color:#fff !important;
     border:none !important;
     border-color: #fff;
 }
-a.ui-state-hover.ui-datepicker-prev-hover{
+a.ui-state-hover.ui-datepicker-prev-hover {
     background-color:#676767 !important;
     border:1px solid !important;
     border-color: #676767;
     border-radius: 3px;
 }
 
-a.ui-state-active{
+a.ui-state-active {
     background-color:#E65130 !important;
     border:1px solid !important;
     border-color: #E65130 !important;
     border-radius: 3px !important;
 }
-a.ui-state-hover{
+a.ui-state-hover {
     background-color:#E65130 !important;
     border:1px solid !important;
     border-color: #E65130 !important;
     border-radius: 3px !important;
 }
-.ui-widget-header .ui-icon{
+.ui-widget-header .ui-icon {
     background-image: url("../imgs/ui-icons_ffffff_256x240.png") !important;
 }
-.pickerTrigger{
+.pickerTrigger {
     float: right;
     font-size: 28px !important;
     margin-left: 5px;
@@ -960,8 +1463,20 @@ a.ui-state-hover{
     color: #666666;
     cursor: pointer;
 }
-a:hover.pickerTrigger{
+.pickerTrigger.acc {
+    float: right;
+    font-size: 22px !important;
+    margin-top: -4px;
+    margin-right: -1px;
+    padding: 0;
+    color: white;
+    cursor: pointer;
+}
+a:hover.pickerTrigger {
     color:#040404;
+}
+a:hover.pickerTrigger.acc {
+    color: white;
 }
 label {
     padding-top: 2px;
@@ -973,8 +1488,163 @@ label {
     font-weight: 600;
     margin-top:3px;
 }
-label.datepickerLabel{
+label.datepickerLabel {
     font-size: 12px;
     margin-top: 7px;
     float: left;
+}
+
+#sliderBG {
+    background-color: #373737;
+    z-index: 0;
+}
+.leftnav2 {
+    width: 49px;
+    height: 49px;
+    border-radius: 50%;
+    border: 4px solid white;
+    left: 2%;
+    background-color: transparent;
+    opacity: 1;
+    -webkit-transition: background-color 0.4s, opacity 0.5s;
+    transition: background-color 0.4s, opacity 0.5s;
+    float: left;
+    margin-left: 2%;
+}
+.leftnav2:hover{
+    background-color: #666;
+    opacity: 0.89;
+}
+.leftnav2 .arrow {
+    top: -2px;
+    width: 54px;
+    height: 54px;
+    position: relative;
+    right: 3px;
+}
+.leftnav2 .arrow:after {
+    width: 24px;
+    height: 4px;
+    background: white;
+    transform: rotate(45deg);
+    top: 59%;
+    position: absolute;
+    left: 29%;
+    content: "";
+}
+.leftnav2 .arrow:before {
+    width: 24px;
+    height: 4px;
+    background: white;
+    transform: rotate(-45deg);
+    top: 31%;
+    position: absolute;
+    left: 29%;
+    content:"";
+}
+.leftnav2 .arrow .l {
+    width: 24px;
+    height: 4px;
+    background: white;
+    transform: rotate(45deg);
+    top: 27px;
+    left: 12px;
+}
+.leftnav2 .arrow .r {
+    width: 24px;
+    height: 4px;
+    background: white;
+    transform: rotate(-45deg);
+    top: 11px;
+    left: 12px;
+}
+.rightnav2 {
+    width: 49px;
+    height: 49px;
+    border-radius: 50%;
+    border: 4px solid white;
+    right: 2%;
+    background-color: transparent;
+    opacity: 1;
+    -webkit-transition: background-color 0.4s, opacity 0.5s;
+    transition: background-color 0.4s, opacity 0.5s;
+    float: right;
+    margin-right: 2%;
+}
+.rightnav2:hover{
+    background-color: #666;
+    opacity: 0.89;
+}
+.rightnav2 .arrow {
+    top: -2px;
+    width: 54px;
+    height: 54px;
+    position: relative;
+    right: 3px;
+}
+.rightnav2 .arrow:after {
+    width: 24px;
+    height: 4px;
+    background: white;
+    transform: rotate(135deg);
+    top: 59%;
+    position: absolute;
+    right: 29%;
+    content: ""; 
+}
+.rightnav2 .arrow:before {
+    width: 24px;
+    height: 4px;
+    background: white;
+    transform: rotate(-135deg);
+    top: 31%;
+    position: absolute;
+    right: 29%;
+    content:"";
+}
+
+@media (max-width: 1440px) {
+    div.rightnav2 {
+        margin-right: 2% !important;
+    }
+    div.leftnav2 {
+        margin-left: 2% !important;
+    }
+    
+}
+@media (min-width: 1281px) and (max-width: 1380px) {
+    div.rightnav2 {
+        margin-right: 6% !important;
+    }
+    div.leftnav2 {
+        margin-left: 6% !important;
+    }
+    
+}
+@media (min-width: 1025px) and (max-width:1280px) {
+    div.rightnav2 {
+        margin-right: 10% !important;
+    }
+    div.leftnav2 {
+        margin-left: 10% !important;
+    }
+    
+}
+@media (min-width: 1024px) and (max-width: 1100px) {
+    div.rightnav2 {
+        margin-right: 16% !important;
+    }
+    div.leftnav2 {
+        margin-left: 16% !important;
+    }
+    
+}
+@media (max-width: 1024px) {
+    div.rightnav2 {
+        margin-right: 16% !important;
+    }
+    div.leftnav2 {
+        margin-left: 16% !important;
+    }
+    
 }

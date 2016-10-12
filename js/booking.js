@@ -1,5 +1,8 @@
- $(function(){
-
+ $(function booking (){
+     
+     var $destinationHeader = $(".selectDestination .customSelect");
+     var $resortHeader = $(".selectResort .customSelect");
+     
     $('#frmBooking').on('submit', function(e) {
         var elements = this.elements;
         var valid = {};
@@ -8,34 +11,75 @@
     $("#frmBooking").trigger("reset");
      
     //Selects
-     $("#destination").on('change', function() {
+     //New <ul />
+     /*$destinationHeader.on('click', function() {
+         openSelect(this);
+     });
+     
+     $resortHeader.on('click', function() {
+         openSelect(this);
+     });
+     
+     //Functions open / pick selection
+     function openSelect(mySelect) {
+         var $this = $(mySelect);
+         var $options = $this.next(".panel");
+                    
+         $this.toggleClass("active");
+         
+         
+         chooseOption($this, $options);
+     }
+     
+     function chooseOption(select, options) {
+         var $mySelect = select;
+         var $optionWrapper = options;
+         var $list = $optionWrapper.children();
+         
+         $optionWrapper.toggleClass("visible");
+         
+         $optionWrapper.on('click', 'li', function() {
+             $list.removeClass('selected');
+             var selection = $(this).addClass('selected');
+             $mySelect.toggleClass("active");
+             $optionWrapper.toggleClass("visible");
+             $mySelect.text(selection.text());
+             $mySelect.append("<div class=\"arrow\" />")
+             var $selectedVal = $optionWrapper.find(".selected").data("val");
+         alert($selectedVal);
+         });
+         
+         
+     }*/
+     //Old Selects
+     $(".selCountry").on('change', function() {
           var element = $(this);
           var selection = element.val();
 
           if(selection === "Jamaica"){
-              $("#resort").val("Negril");
+              $(".selResort").val("Negril");
           }
           else {
               if(selection === "Turks And Caicos Islands"){
-                  $("#resort").val("Turks");
+                  $(".selResort").val("Turks");
               } else{
-                  $("#resort").val("Select Resort");
+                  $(".selResort").val("Select Resort");
               }
           }
       });
      
-      $("#resort").on('change', function() {
+      $(".selResort").on('change', function() {
           var element = $(this);
           var selection = element.val();
 
           if( (selection === "Negril") || (selection === "Rios") ){
-              $("#destination").val("Jamaica");
+              $(".selCountry").val("Jamaica");
           }
           else {
               if(selection === "Turks"){
-                  $("#destination").val("Turks And Caicos Islands");
+                  $(".selCountry").val("Turks And Caicos Islands");
               } else{
-                  $("#destination").val("Select Destination");
+                  $(".selCountry").val("Select Destination");
               }
           }
       });
@@ -44,17 +88,17 @@
     var minCheckIn = addDays(new Date(), 3);
     var minCheckOut = addDays(new Date(), 6);
     
-    $( "#dateIn" ).datepicker({
+    $( ".checkIn" ).datepicker({
         dateFormat: "mm/dd/yy",
         minDate: minCheckIn,
         onSelect: function(date){
             var outOn = addDays(date,3);
             var outDef = addDays(date,7);
-            $("#dateOut").datepicker("option","minDate", outOn);
-            $("#dateOut").datepicker("setDate", outDef);
+            $(".checkOut").datepicker("option","minDate", outOn);
+            $(".checkOut").datepicker("setDate", outDef);
         }
     }); 
-    $( "#dateOut" ).datepicker({
+    $( ".checkOut" ).datepicker({
         dateFormat: "mm/dd/yy",
         minDate: minCheckOut,
     });
