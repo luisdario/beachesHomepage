@@ -61,11 +61,40 @@
                             <form id="frmBookingBlck" class="frmBookNow" style="margin-top: 18px;">
                                 <div class="">
                                     <div class="accWrapper marg-bot">
-                                        <select id="destination" class="selCountry accordion"></select>
+                                        <!--<div class="accordion">
+                                            Select Destination
+                                            <div class="arrow"></div>
+                                        </div>
+                                        <ul class="panel">
+                                            <li class="selected" data-val="def"><a href="#">Select Destination</a></li>
+                                            <li data-val="JM"><a href="#"> Jamiaca</a> </li>
+                                            <li data-val="TC"><a href="#"> Turks &amp; Caicos Island </a></li>
+                                        </ul>-->
+                                        
+                                        <select id="destination" class="selCountry accordion">
+                                          <!--  <option>Select Destination</option>
+                                            <option>Jamaica</option>
+                                            <option>Turks And Caicos Islands</option>-->
+                                        </select>
                                         <div class="arrow"></div>
                                     </div>
                                     <div class="accWrapper marg-bot">
-                                        <select id="resort" class="selResort accordion"></select>
+                                        <!--<div class="accordion">
+                                            Select Resort
+                                            <div class="arrow"></div>
+                                        </div>
+                                        <ul class="panel">
+                                            <li class="selected"><a href="#"> Select Resort</a></li>
+                                            <li><a href="#"> Beaches Negril</a></li>
+                                            <li><a href="#"> Beaches Ocho Rios</a></li>
+                                            <li><a href="#"> Beaches Turks &amp; Caicos</a></li>
+                                        </ul>-->
+                                        <select id="resort" class="selResort accordion">
+                                        <!--    <option>Select Resort</option>
+                                            <option value="Negril">Beaches Negril</option>
+                                            <option value="Rios">Beaches Ocho Rios</option>
+                                            <option value="Turks">Beaches Turks &amp; Caicos</option>-->
+                                        </select>
                                         <div class="arrow"></div>
                                     </div>
                                     <div class="accWrapper marg-bot">
@@ -73,12 +102,22 @@
                                             <a class="pickerTrigger acc icon-cal"></a>
                                             <input class="checkIn datePicker pickDate" type="text" id="dateIn" value="Select Check In Date" readonly="readonly">
                                         </div>
+                                        <!--<div class="accordion showPicker">
+                                            Select Check-In Date
+                                            <div class="arrow"></div>
+                                        </div>
+                                        <div id="chkIn" class="panel checkIn"></div>-->
                                     </div>
                                     <div class="accWrapper marg-bot">
                                         <div class="accordion picker">
                                             <a class="pickerTrigger acc icon-cal"></a>
                                             <input class="checkOut datePicker pickDate" type="text" id="dateOut" value="Select Check Out Date" readonly="readonly">
                                         </div>
+                                        <!--<div class="accordion showPicker">
+                                            Select Check-Out Date
+                                            <div class="arrow"></div>
+                                        </div>
+                                        <div id="chkOut" class="panel checkOut"></div>-->
                                     </div>
                                 </div>
                                 <div class="">
@@ -86,7 +125,15 @@
                                         <label for="adults" class="inline">Adults<span>(Age 15+)</span></label>
                                         <div class="accWrapper select-sm">
                                             <div style="z-index:2;top:8px;right:7px" class="arrow"></div>
-                                            <select name="adultsSelect" id="adults" class="select-sm selAdult"></select>
+                                            <select name="adultsSelect" id="adults" class="select-sm selAdult">
+                                                <!--<option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                                <option>6</option>
+                                                <option>7</option>-->
+                                            </select>
                                         </div>
                                     </div>
                                     <div class="selectWrapper" style="float:right; width:106px">
@@ -94,6 +141,11 @@
                                         <div class="accWrapper select-sm">
                                             <div style="z-index:2;top:8px;right:7px" class="arrow"></div>
                                             <select name="childrenSelect" id="children" class="select-sm selChildren">
+                                               <!-- <option>0</option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>-->
                                             </select>
                                         </div>
                                     </div>
@@ -230,12 +282,40 @@
                     <form id="frmBooking" class="frmBookNow" style="margin-top: 18px;">
                         <div class="destination">
                             <div class="selectDestination accWrapper gray">
+                                <!--<div class="customSelect">
+                                    Select Destination
+                                    <div class="arrow"></div>
+                                </div>
+                                <ul class="panel">
+                                    <li class="selected def" data-val="def">Select Resort</li>
+                                    <li data-val="JM">Jamaica</li>
+                                    <li data-val="TC">Turks &amp; Caicos Islands</li>
+                                </ul>-->
                                 <div class="arrow"></div>
-                                <select id="destination" class="selCountry mySelect"></select>
+                                <select id="destination" class="selCountry mySelect">
+                                    <!--<option>Select Destination</option>
+                                    <option>Jamaica</option>
+                                    <option>Turks And Caicos Islands</option>-->
+                                </select>
                             </div>
                             <div class="selectResort accWrapper gray">
+                              <!--  <div class="customSelect">
+                                    Select Resort
+                                    <div class="arrow"></div>
+                                </div>-->
+                                <!--<ul class="panel">
+                                    <li class="selected def" data-val="def">Select Resort</li>
+                                    <li data-val="BN">Beaches Negril</li>
+                                    <li data-val="BOR"> Beaches Ocho Rios </li>
+                                    <li data-val="BTC">Beaches Turks &amp; Caicos</li>
+                                </ul>-->
                                 <div class="arrow"></div>
-                                <select id="resort" class="selResort mySelect"></select>
+                                <select id="resort" class="selResort mySelect">
+                                    <!--<option>Select Resort</option>
+                                    <option value="Negril">Beaches Negril</option>
+                                    <option value="Rios">Beaches Ocho Rios</option>
+                                    <option value="Turks">Beaches Turks &amp; Caicos</option>-->
+                                </select>
                                 
                             </div>
                             <div>
@@ -248,6 +328,7 @@
                                 <label for="dateOut1" class="datepickerLabel">Check-Out</label>
                                 <a class="pickerTrigger icon-cal" style="float:right;"></a>
                                 <input class="checkOut datePicker" type="text" id="dateOut1" placeholder="Select a Date" readonly="readonly">
+
                             </div>
                         </div>
                         <div class="guests">
@@ -255,14 +336,28 @@
                                 <label for="adults" class="inline">Adults<span>(Age 15+)</span></label>
                                 <div class="accWrapper gray select-sm">
                                     <div style="z-index:2;top:8px;right:7px" class="arrow"></div>
-                                    <select name="adultsSelect" id="adults" class="select-sm selAdult"></select>
+                                    <select name="adultsSelect" id="adults" class="select-sm selAdult">
+                                        <!--<option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>-->
+                                    </select>
                                 </div>
                             </div>
                             <div class="selectWrapper" style="float:right; width:106px">
                                 <label for="children" class="inline">Children<span>(Age 0-15)</span></label>
                                 <div class="accWrapper gray select-sm">
                                     <div style="z-index:2;top:8px;right:7px" class="arrow"></div>
-                                    <select name="childrenSelect" id="children" class="select-sm selChildren"></select>
+                                    <select name="childrenSelect" id="children" class="select-sm selChildren">
+                                        <!--<option>0</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>-->
+                                    </select>
                                 </div>
                             </div>
                         </div>
@@ -278,6 +373,7 @@
         <script src="js/jquery-ui.js"></script>
         <script src="js/bSlider.js"></script>
         <script src="js/booknow.js"></script>
+<!--    <script src="js/booking.js"></script>-->
         
         <script type="text/javascript">
             $(function() {
@@ -303,6 +399,24 @@
                    document.getElementById("myDropdown").classList.toggle("show");
                 });
                 
+                //For accordion selects
+               /* $(".customSelect").on('click', function() {
+                    var $this = $(this);
+                    var $options = $this.next(".panel");
+                    
+                    $this.toggleClass("active");
+                    $options.toggleClass("visible");
+                });*/
+                //Accordion
+                /*var acc = document.getElementsByClassName("accordion"),
+                    i;
+
+                for (i = 0; i < acc.length; i++) {
+                    acc[i].onclick = function(){
+                        this.classList.toggle("active");
+                        this.nextElementSibling.classList.toggle("visible");
+                    }
+                }*/
             });
         </script>
     </body>

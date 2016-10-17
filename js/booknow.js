@@ -16,7 +16,13 @@
     // Defaults
         var pluginName = "booking",
             defaults = {
-                //someDefault: "Some Value"
+                minCheckIn: 3,
+                minCheckOut: 3,
+                defCheckOut: 6, 
+                destination: ['Select Destination', 'Jamaica', 'Turks and Caicos Islands'],
+                resorts: ['Select Resort', 'Beaches Negril', 'Beaches Ocho Rios', 'Beaches Turks & Caicos'],
+                adults: 7,
+                children: 4
             };
 
     // Plugin Constructor
@@ -49,6 +55,10 @@
 //                console.log(this);
                 
                 var bookingForm = this.$el.children();
+                settings = this.options;
+                
+                var adults = settings.adults + 1,
+                    child = settings.children + 1;
                 
                 //select cache
                 $wrapper = bookingForm.find('.accWrapper');
@@ -63,9 +73,24 @@
                 $selectAdult = bookingForm.find('.selAdult');
                 $selectChildren = bookingForm.find('.selChildren');
                 
-                
+               
+                //Init components
                 this.initPickers($checkInDate, $checkOutDate);
                 
+                settings.destination.forEach(function(country) {
+                    $selectCountry.append('<option>'+ country +'</option>');
+                });
+                
+                settings.resorts.forEach(function(resort) {
+                    $selectResort.append('<option>'+ resort +'</option>');
+                });
+                
+                for (var a = 0; a < adults; a++)
+                    $selectAdult.append('<option>'+ a + '</option>');
+                for (var c = 0; c < child; c++)
+                    $selectChildren.append('<option>'+ c + '</option>');
+                
+                //Events
                 $wrapper.click(function() {
                    $(this).toggleClass("focus"); 
                 });
@@ -87,11 +112,11 @@
                 var selResort = $(country).parent().next().find('.selResort');
                 
                 if( selectedCountry === "Jamaica") {
-                    $(selResort).val("Negril");
+                    $(selResort).val("Beaches Negril");
                 }
                 else {
-                    if( selectedCountry === "Turks And Caicos Islands"){
-                        $(selResort).val("Turks");
+                    if( selectedCountry === "Turks and Caicos Islands"){
+                        $(selResort).val("Beaches Turks & Caicos");
                     } else{
                         $(selResort).val("Select Resort");
                     }
@@ -105,12 +130,12 @@
                 var selectedResort = $(resort).val();
                 var selCountry = $(resort).parent().prev().find('.selCountry');
                 
-                if( (selectedResort === "Negril") || (selectedResort === "Rios") ) {
+                if( (selectedResort === "Beaches Negril") || (selectedResort === "Beaches Ocho Rios") ) {
                     $(selCountry).val("Jamaica");
                 }
                 else {
-                    if( selectedResort === "Turks"){
-                        $(selCountry).val("Turks And Caicos Islands");
+                    if( selectedResort === "Beaches Turks & Caicos"){
+                        $(selCountry).val("Turks and Caicos Islands");
                     } else{
                         $(selCountry).val("Select Destination");
                     }
@@ -125,8 +150,8 @@
             initPickers: function startPickers( pickIn, pickOut ) {
                 var pickIn = $checkInDate;
                 var pickOut = $checkOutDate;
-                minCheckIn = Plugin.prototype.addDate(new Date(), 3);
-                minCheckOut = Plugin.prototype.addDate(new Date(), 6);
+                minCheckIn = Plugin.prototype.addDate(new Date(), settings.minCheckIn);
+                minCheckOut = Plugin.prototype.addDate(new Date(), settings.defCheckOut);
                 
                 //pickerIn init
                 $(pickIn).datepicker({
@@ -147,8 +172,8 @@
             changeChkOut: function setDateOut( chkOutPicker, chkInDate ) {
                 
                 //add check out dates
-                var outOn = Plugin.prototype.addDate(chkInDate,3);
-                var outDef = Plugin.prototype.addDate(chkInDate,7);
+                var outOn = Plugin.prototype.addDate(chkInDate, settings.minCheckOut);
+                var outDef = Plugin.prototype.addDate(chkInDate, settings.defCheckOut);
                 
                 //set check out dates
                 $(chkOutPicker).datepicker("option","minDate", outOn);
